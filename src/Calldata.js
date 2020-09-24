@@ -63,7 +63,27 @@ class Calldata extends React.Component {
     <div>
       <h1>Welcome </h1>
     <h3>
-    {items.map(item=><li className={item.atb} key={item.id}>{item.name}</li>)}
+  {items.map(item => 
+
+  {
+    if(item.img!==""){
+      return <div>
+        <img alt="" src={item.img}/>
+        <li className={item.atb} key={item.id}>{item.name}</li>
+      
+      </div>
+    }
+    
+    
+    else{
+    return [
+  <li className={item.atb} key={item.id}>{item.name}</li>
+];
+  }
+})
+
+
+}
     </h3>
     
     <div className="ui action input">
