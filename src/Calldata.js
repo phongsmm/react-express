@@ -16,7 +16,7 @@ class Calldata extends React.Component {
   }
 
   async componentDidMount() {
-    const link = "http://localhost:9000/api";
+    const link = "https://express-serve.herokuapp.com/api";
     const response = await fetch(link);
     const data = await response.json();
     await this.setState({isLoaded:true,items:data});
@@ -45,7 +45,7 @@ class Calldata extends React.Component {
 
     };
 
-    const r =  await fetch("http://localhost:9000/create",
+    const r =  await fetch("https://express-serve.herokuapp.com/create",
     {method:'POST',headers:{'Content-type':'application/json'},
     body:JSON.stringify(newData)
   });

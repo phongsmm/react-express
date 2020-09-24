@@ -1,1 +1,0 @@
-module.exports  = [{"id":"01","name":"The Lion King","atb":"ON"},{"id":"02","name":"The Godfather","atb":"OFF"},{"id":"03","name":"The Dark Knight","atb":"ON"},{"id":"04","name":"The Majoraty","atb":"ON"},{"id":"05","name":"The Sweden","atb":"OFF"},{"id":"06","name":"Sweet Juice","atb":"OFF"}] ;
