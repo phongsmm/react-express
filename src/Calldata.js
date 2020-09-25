@@ -25,6 +25,14 @@ class Calldata extends React.Component {
 
   }
 
+
+  shouldComponentUpdate(Props,State){
+    if(this.state!==State){
+      return true;
+    }
+
+  }
+
    count(len){
     if(len<10){
       return `0${len}`
@@ -61,26 +69,24 @@ class Calldata extends React.Component {
     if(isLoaded){console.log('Data Loaded');}
   return (
     <div>
-      <h1>Welcome </h1>
+
     <h3>
   {items.map(item => 
 
   {
-    if(item.img!==""){
-      return <div>
-        <img alt="" src={item.img}/>
-        <li className={item.atb} key={item.id}>{item.name}</li>
-      
+
+      return [
+      <div  className ="Datacard">
+        <div className="ui card" key={item.id}><div className="image"><img draggable="false" alt="" src={item.img}/>
+        </div><div className="content"><div className="header">{item.name}</div><div className="meta">
+        <div className={item.atb}><span className="date">Attribute is : {item.atb}</span></div></div>
+          </div></div>
       </div>
-    }
     
-    
-    else{
-    return [
-  <li className={item.atb} key={item.id}>{item.name}</li>
+  
 ];
   }
-})
+  )
 
 
 }
